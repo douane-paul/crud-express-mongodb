@@ -1,0 +1,13 @@
+<form method="POST" id="form-edit">
+    <div class="form-group">
+        <label for="inputName" class="form-label mt-4">Nom de l'auteur</label>
+        <input required value="<%- quote.name %>" type="text" class="form-control" id="inputName-edit" name="name" placeholder="Entrez le nom de l'auteur">
+    </div>
+    <div class="form-group pb-4">
+        <label for="inputQuote" class="form-label mt-4">Citation</label>
+        <input required value="<%- quote.quote %>"type="text" class="form-control" id="inputQuote-edit" name="quote" placeholder="Entrez la citation">
+    </div>
+    <input type="hidden" name="id" value="<%- quote._id %>" id="inputId-edit">
+    <button type="submit" class="btn btn-primary mb-4">Enregistrer cette citation</button>
+</form>
+<script src="/js/main.js"></script>

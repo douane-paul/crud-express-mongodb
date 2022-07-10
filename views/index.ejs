@@ -1,0 +1,23 @@
+<table class="table table-hover" data-pagination="true">
+    <thead>
+    <tr>
+        <th scope="col">_ID</th>
+        <th scope="col">_NAME</th>
+        <th scope="col">_QUOTE</th>
+        <th scope="col">_ACTION</th>
+    </tr>
+    </thead>
+        <tbody>
+            <% for(var i = 0; i < quotes.length; i++) {%>
+                <tr>
+                    <th scope="row"><%= quotes[i]._id %></th>
+                    <td><%= quotes[i].name %></td>
+                    <td><%= quotes[i].quote %></td>
+                    <td>
+                        <a href="/edit/<%= quotes[i]._id %>"><button class="btn btn-primary">Modifier</button></a>
+                        <a href="/quotes/delete/<%= quotes[i]._id %>"><button class="btn btn-danger">Supprimer</button></a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+</table>
